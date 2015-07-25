@@ -1,0 +1,5 @@
+script: 
+  - ssh -q ${USER}@localhost exit
+  - echo $?
+  - ssh -q travis@localhost exit
+  - echo $?

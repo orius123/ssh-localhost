@@ -1,7 +1,6 @@
 sudo: true
 script: 
-  - echo $PASSWORD
   - sudo apt-get install sshpass
-  - sshpass -p 'traivs' ssh -o "StrictHostKeyChecking no" -q ${USER}@localhost exit
+  - sshpass -p 'traivs' ssh -o StrictHostKeyChecking=no travis@localhost exit
   - echo $?
 

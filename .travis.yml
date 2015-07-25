@@ -1,6 +1,6 @@
 script: 
   - echo ${USER}
-  - ssh -q ${USER}@localhost exit
+  - ssh -o "StrictHostKeyChecking no" -q ${USER}@localhost exit
   - echo $?
   - ssh -q travis@localhost exit
   - echo $?
